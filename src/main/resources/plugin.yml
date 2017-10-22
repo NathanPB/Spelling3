@@ -1,0 +1,9 @@
+name: Spelling3
+author: NathanPB
+version: 1.0 - SNAPSHOT
+main: cf.nathanpb.Spelling3.Core
+
+commands:
+ Spelling:
+  description: Spelling3 main command
+  usage: /spelling
