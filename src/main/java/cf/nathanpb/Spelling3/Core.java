@@ -4,10 +4,8 @@ import cf.nathanpb.Spelling3.book.BookArea;
 import cf.nathanpb.Spelling3.book.BookItem;
 import cf.nathanpb.Spelling3.commands.Spelling;
 import cf.nathanpb.Spelling3.entity.SpellingPlayer;
-import cf.nathanpb.Spelling3.eventHandler.InventoryClick;
-import cf.nathanpb.Spelling3.eventHandler.ManaOnHit;
-import cf.nathanpb.Spelling3.eventHandler.PlayerInteract;
-import cf.nathanpb.Spelling3.eventHandler.VillagerSpawn;
+import cf.nathanpb.Spelling3.eventHandler.*;
+import cf.nathanpb.Spelling3.events.EventBus;
 import cf.nathanpb.Spelling3.item.ItemInitializator;
 import cf.nathanpb.Spelling3.item.SpellingItem;
 import cf.nathanpb.Spelling3.recipes.SpellingRecipe;
@@ -98,7 +96,7 @@ public class Core extends JavaPlugin{
     };
 
     private static Phase[] Disable = new Phase[]{
-            new Phase("Unregistering events", ()-> HandlerList.unregisterAll()),
+            new Phase("Unregistering target", ()-> HandlerList.unregisterAll()),
             new Phase("Disassembling Spell Tables", () -> SpellTable.tableList.stream().forEach(SpellTable::dropAll))
     };
 

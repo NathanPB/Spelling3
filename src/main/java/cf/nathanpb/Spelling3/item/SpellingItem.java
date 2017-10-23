@@ -109,8 +109,8 @@ public class SpellingItem implements Listener{
 
 
     /*
-                RAW BUKKIT EVENTS
-                 */
+    RAW BUKKIT EVENTS
+    */
     @EventHandler
     public void onPIE(PlayerInteractEvent e) {
         if (!instanceOf(e.getItem())) return;
